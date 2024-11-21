@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'UhBeeZZIBA-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/UhBeeZZIBA-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-size: 14pt;
+  --small-font-size: .8em;
+  --radius: 3em;
+
+  --color-default: #191919;
+  --color-bak: #fff;
+  --color-point: #f77b62;
+
+  --box-shadow: 0 0 30px rgba(0,0,0,.2);
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+body {font: var(--font-size)/1.5 'Pretendard-Regular', sans-serif; color: var(--color-default);}
+#root {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+button.btn {
+  display: inline-block;
+  padding: .4em .7em;
+  font-size: inherit;
+  font-family: inherit;
+  background: var(--color-bak);
+  border: 0;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: .5em;
+}
+
+#wrap {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  max-width: 500px;
+  max-height: 800px;
+  margin: auto;
+}
+.wrap-bg {
+  display: flex;
+  height: 100%;
+  background: var(--color-point);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  align-items: flex-end;
+}
+.content {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 4em);
+  padding: 2em;
+  background: var(--color-bak);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  bottom: -.1em;
+}
+
+#title {
+  position: absolute;
+  top: .7em;
+  left: 1.5em;
+  font-size: 1.8rem;
+  font-family: 'UhBeeZZIBA-Regular';
+  font-weight: 400;
+  color: var(--color-bak);
+}
+
+.chat {
+  position: relative;
+  min-height: 4em;
+  padding: 1.2em;
+  background: #eee;
+  border-radius: 1em;
+  max-width: 60%;
+  float: left;
+  clear: both;
+}
+.chat.user {
+  float: right;
+}
